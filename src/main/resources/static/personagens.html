@@ -1,0 +1,146 @@
+<!-- Pagina de personagens -->
+<!DOCTYPE html>
+<html lang="pt-BR">
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title>Personagens - GerenciadorDD</title>
+  <link rel="icon" href="assets/img/brasao.svg" type="image/svg+xml">
+  <link rel="stylesheet" href="assets/css/style.css">
+</head>
+<body>
+
+  <header class="topbar">
+    <div class="marca">
+      <img src="assets/img/brasao.svg" alt="Brasão" style="width:28px;height:28px;">
+      GerenciadorDD
+    </div>
+    <div class="usuario">Carlos ▾</div>
+  </header>
+
+  <div class="layout">
+    <nav class="sidebar">
+      <a href="dashboard.html">Dashboard</a>
+      <a href="campanhas.html">Campanhas</a>
+      <a href="personagens.html" class="ativo">Personagens</a>
+      <a href="bestiario.html">Bestiário</a>
+    </nav>
+
+    <main class="conteudo">
+      <div class="cabecalho-pagina">
+        <h1>Personagens</h1>
+        <button class="botao" id="btn-novo-personagem" type="button">+ Novo personagem</button>
+      </div>
+
+      <div class="barra-busca">
+        <input type="text" id="busca-personagem" placeholder="Buscar personagem..." autocomplete="off">
+      </div>
+
+      <div class="grid-personagens" id="listaPersonagens">
+        <p>Carregando personagens...</p>
+      </div>
+
+      <p id="msg-vazio" class="mensagem-erro escondido">Nenhum personagem encontrado.</p>
+
+      <section class="itens-personagem" id="itensSection" hidden>
+        <h2>Itens do personagem</h2>
+        <p id="personagemSelecionado"></p>
+        <input type="hidden" id="personagemId">
+        <div id="itensLista" class="itens-lista"></div>
+        <form id="itemForm">
+          <input type="text" id="itemNome" placeholder="Nome do item" maxlength="100" required>
+          <button type="submit">Adicionar item</button>
+        </form>
+        <p id="itensMensagem" aria-live="polite"></p>
+      </section>
+    </main>
+  </div>
+
+  <!-- Modal de cadastro -->
+  <div class="overlay-modal escondido" id="overlay-modal">
+    <div class="modal">
+      <div class="modal-cabecalho">
+        <h2 style="font-size:1.2rem;">Novo personagem</h2>
+        <button class="fechar-modal" id="fechar-modal" type="button" aria-label="Fechar">&times;</button>
+      </div>
+
+      <form id="formPersonagem">
+        <div class="campo">
+          <label for="nome-personagem">Nome</label>
+          <input type="text" id="nome-personagem" name="nome" required maxlength="100">
+        </div>
+
+        <div class="campo">
+          <label for="classe-personagem">Classe</label>
+          <input type="text" id="classe-personagem" name="classe" maxlength="50">
+        </div>
+
+        <div class="campo">
+          <label for="nivel-personagem">Nível</label>
+          <input type="number" id="nivel-personagem" name="nivel" value="1" min="1" required>
+        </div>
+
+        <div class="campo">
+          <label for="raca-personagem">Raça</label>
+          <input type="text" id="raca-personagem" name="raca" maxlength="50">
+        </div>
+
+        <div class="campo">
+          <label for="alinhamento-personagem">Alinhamento</label>
+          <input type="text" id="alinhamento-personagem" name="alinhamento" maxlength="50">
+        </div>
+
+        <div class="campo">
+          <label for="forca-personagem">Força</label>
+          <input type="number" id="forca-personagem" name="forca" value="10" min="1" max="30" required>
+        </div>
+
+        <div class="campo">
+          <label for="destreza-personagem">Destreza</label>
+          <input type="number" id="destreza-personagem" name="destreza" value="10" min="1" max="30" required>
+        </div>
+
+        <div class="campo">
+          <label for="constituicao-personagem">Constituição</label>
+          <input type="number" id="constituicao-personagem" name="constituicao" value="10" min="1" max="30" required>
+        </div>
+
+        <div class="campo">
+          <label for="inteligencia-personagem">Inteligência</label>
+          <input type="number" id="inteligencia-personagem" name="inteligencia" value="10" min="1" max="30" required>
+        </div>
+
+        <div class="campo">
+          <label for="sabedoria-personagem">Sabedoria</label>
+          <input type="number" id="sabedoria-personagem" name="sabedoria" value="10" min="1" max="30" required>
+        </div>
+
+        <div class="campo">
+          <label for="carisma-personagem">Carisma</label>
+          <input type="number" id="carisma-personagem" name="carisma" value="10" min="1" max="30" required>
+        </div>
+
+        <div class="campo">
+          <label for="pvmax-personagem">PV máximo</label>
+          <input type="number" id="pvmax-personagem" name="pvMax" value="10" min="1" required>
+        </div>
+
+        <div class="campo">
+          <label for="ca-personagem">Classe de Armadura (CA)</label>
+          <input type="number" id="ca-personagem" name="ca" value="10" min="1" required>
+        </div>
+
+        <div class="campo">
+          <label for="campanha-personagem">ID da campanha (opcional)</label>
+          <input type="number" id="campanha-personagem" name="campanhaId" min="1">
+        </div>
+
+        <button type="submit" class="botao" style="width:100%;">Cadastrar personagem</button>
+        <p id="personagemMensagem" aria-live="polite"></p>
+      </form>
+    </div>
+  </div>
+
+  <script src="assets/js/personagens.js"></script>
+</body>
+</html>

@@ -1,0 +1,40 @@
+<!-- Pagina de acesso -->
+<!DOCTYPE html>
+<html lang="pt-BR">
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title>Entrar - GerenciadorDD</title>
+  <link rel="stylesheet" href="assets/css/style.css">
+</head>
+<body class="pagina-login">
+
+  <div class="card-login">
+    <div class="marca">
+      <img src="assets/img/brasao.svg" alt="Brasão GerenciadorDD">
+      <h1 style="font-size:1.4rem;">GerenciadorDD</h1>
+    </div>
+
+    <form id="form-login" novalidate>
+      <div class="campo">
+        <label for="email">E-mail</label>
+        <input type="email" id="email" required>
+        <p class="mensagem-erro escondido" id="erro-email">Informe um e-mail válido.</p>
+      </div>
+
+      <div class="campo">
+        <label for="senha">Senha</label>
+        <input type="password" id="senha" required minlength="6">
+        <p class="mensagem-erro escondido" id="erro-senha">A senha deve ter pelo menos 6 caracteres.</p>
+      </div>
+
+      <button type="submit" class="botao" style="width:100%;">Entrar</button>
+    </form>
+
+    <p class="link-secundario"><a href="#">Esqueceu a senha?</a></p>
+    <p class="link-secundario">Não tem conta? <a href="#">Cadastre-se</a></p>
+  </div>
+
+  <script src="assets/js/login.js"></script>
+</body>
+</html>

@@ -1,0 +1,56 @@
+<!-- Pagina principal do painel -->
+<!DOCTYPE html>
+<html lang="pt-BR">
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title>Dashboard - GerenciadorDD</title>
+  <link rel="stylesheet" href="assets/css/style.css">
+</head>
+<body>
+
+  <header class="topbar">
+    <div class="marca">
+      <img src="assets/img/brasao.svg" alt="Brasão" style="width:28px;height:28px;">
+      GerenciadorDD
+    </div>
+    <div class="usuario">Carlos ▾</div>
+  </header>
+
+  <div class="layout">
+    <nav class="sidebar">
+      <a href="dashboard.html" class="ativo">Dashboard</a>
+      <a href="campanhas.html">Campanhas</a>
+      <a href="personagens.html">Personagens</a>
+      <a href="bestiario.html">Bestiário</a>
+    </nav>
+
+    <main class="conteudo">
+      <div class="cabecalho-pagina">
+        <h1>Bem-vindo, Carlos</h1>
+      </div>
+
+      <div class="grid-stats">
+        <div class="card-stat">
+          <div class="numero" id="total-campanhas">0</div>
+          <div class="rotulo">Campanhas ativas</div>
+        </div>
+        <div class="card-stat">
+          <div class="numero" id="total-personagens">0</div>
+          <div class="rotulo">Personagens</div>
+        </div>
+        <div class="card-stat">
+          <div class="numero" id="total-criaturas">0</div>
+          <div class="rotulo">Criaturas no bestiário</div>
+        </div>
+      </div>
+
+      <h2 style="font-size:1.2rem; margin-bottom:16px;">Últimas campanhas</h2>
+      <div class="lista-simples" id="ultimas-campanhas"></div>
+      <p id="dashboard-mensagem" style="color:#B8AD98; font-size:0.9rem;"></p>
+    </main>
+  </div>
+
+  <script src="assets/js/dashboard.js"></script>
+</body>
+</html>

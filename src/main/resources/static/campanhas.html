@@ -1,0 +1,53 @@
+<!-- Pagina de campanhas -->
+<!DOCTYPE html>
+<html lang="pt-BR">
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title>Campanhas - GerenciadorDD</title>
+  <link rel="stylesheet" href="assets/css/style.css">
+</head>
+<body>
+  <header class="topbar">
+    <div class="marca"><img src="assets/img/brasao.svg" alt="Brasão" style="width:28px;height:28px;">GerenciadorDD</div>
+    <div class="usuario">Carlos ▾</div>
+  </header>
+  <div class="layout">
+    <nav class="sidebar">
+      <a href="dashboard.html">Dashboard</a>
+      <a href="campanhas.html" class="ativo">Campanhas</a>
+      <a href="personagens.html">Personagens</a>
+      <a href="bestiario.html">Bestiário</a>
+    </nav>
+    <main class="conteudo">
+      <div class="cabecalho-pagina">
+        <h1>Campanhas</h1>
+        <button class="botao" id="btn-nova-campanha" type="button">+ Nova campanha</button>
+      </div>
+      <div class="barra-busca">
+        <input type="text" id="busca-campanha" placeholder="Buscar campanha..." autocomplete="off">
+      </div>
+      <p id="msg-campanhas" class="mensagem-erro escondido"></p>
+      <div id="listaCampanhas"><p>Carregando campanhas...</p></div>
+      <p id="msg-vazio" class="mensagem-erro escondido">Nenhuma campanha encontrada.</p>
+    </main>
+  </div>
+
+  <div class="overlay-modal escondido" id="overlay-modal">
+    <div class="modal">
+      <div class="modal-cabecalho">
+        <h2>Nova campanha</h2>
+        <button class="fechar-modal" id="fechar-modal" type="button">&times;</button>
+      </div>
+      <form id="formCampanha">
+        <div class="campo"><label for="nome-campanha">Nome</label><input id="nome-campanha" name="nome" required></div>
+        <div class="campo"><label for="descricao-campanha">Descrição</label><textarea id="descricao-campanha" name="descricao"></textarea></div>
+        <div class="campo"><label for="mestre-campanha">Mestre</label><input id="mestre-campanha" name="mestre"></div>
+        <p id="campanhaMensagem" class="mensagem-erro"></p>
+        <button type="submit" class="botao" style="width:100%;">Cadastrar campanha</button>
+      </form>
+    </div>
+  </div>
+  <script src="assets/js/campanhas.js"></script>
+</body>
+</html>

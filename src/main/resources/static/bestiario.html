@@ -1,0 +1,66 @@
+<!-- Pagina do bestiario -->
+<!DOCTYPE html>
+<html lang="pt-BR">
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title>Bestiário - GerenciadorDD</title>
+  <link rel="stylesheet" href="assets/css/style.css">
+</head>
+<body>
+  <header class="topbar">
+    <div class="marca"><img src="assets/img/brasao.svg" alt="Brasão" style="width:28px;height:28px;">GerenciadorDD</div>
+    <div class="usuario">Carlos ▾</div>
+  </header>
+  <div class="layout">
+    <nav class="sidebar">
+      <a href="dashboard.html">Dashboard</a>
+      <a href="campanhas.html">Campanhas</a>
+      <a href="personagens.html">Personagens</a>
+      <a href="bestiario.html" class="ativo">Bestiário</a>
+    </nav>
+    <main class="conteudo">
+      <div class="cabecalho-pagina">
+        <h1>Bestiário</h1>
+        <button class="botao" id="btn-nova-criatura" type="button">+ Nova criatura</button>
+      </div>
+      <div class="barra-busca">
+        <input type="text" id="busca-criatura" placeholder="Buscar criatura..." autocomplete="off">
+        <select id="filtro-tipo"><option value="">Todos os tipos</option></select>
+      </div>
+      <p id="msg-carregando">Carregando criaturas...</p>
+      <p id="msg-erro" class="mensagem-erro escondido">Não foi possível carregar o bestiário.</p>
+      <div id="lista-criaturas"></div>
+      <p id="msg-vazio" class="mensagem-erro escondido">Nenhuma criatura encontrada.</p>
+    </main>
+  </div>
+
+  <div class="overlay-modal escondido" id="overlay-criatura">
+    <div class="modal">
+      <div class="modal-cabecalho">
+        <h2>Nova criatura</h2>
+        <button class="fechar-modal" id="fechar-criatura" type="button">&times;</button>
+      </div>
+      <form id="formCriatura">
+        <div class="campo"><label>Nome</label><input name="nome" required></div>
+        <div class="campo"><label>Tipo</label><input name="tipo"></div>
+        <div class="campo"><label>ND</label><input name="nd"></div>
+        <div class="campo"><label>Tamanho</label><input name="tamanho"></div>
+        <div class="campo"><label>CA</label><input name="ca" type="number" value="10"></div>
+        <div class="campo"><label>PV</label><input name="pv" value="10"></div>
+        <div class="campo"><label>Força</label><input name="forca" type="number" value="10"></div>
+        <div class="campo"><label>Destreza</label><input name="destreza" type="number" value="10"></div>
+        <div class="campo"><label>Constituição</label><input name="constituicao" type="number" value="10"></div>
+        <div class="campo"><label>Inteligência</label><input name="inteligencia" type="number" value="10"></div>
+        <div class="campo"><label>Sabedoria</label><input name="sabedoria" type="number" value="10"></div>
+        <div class="campo"><label>Carisma</label><input name="carisma" type="number" value="10"></div>
+        <div class="campo"><label>Habilidades</label><textarea name="habilidades"></textarea></div>
+        <div class="campo"><label>Ações</label><textarea name="acoes"></textarea></div>
+        <p id="criaturaMensagem" class="mensagem-erro"></p>
+        <button type="submit" class="botao" style="width:100%;">Cadastrar criatura</button>
+      </form>
+    </div>
+  </div>
+  <script src="assets/js/bestiario.js"></script>
+</body>
+</html>
