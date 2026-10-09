@@ -1,1 +1,6 @@
-5dda0d1 (HEAD -> master) Versao inicial do projeto GerenciadorDD
+d1f60b5 (HEAD -> main, origin/main) Corrige e organiza o README
+3a8b4b7 Remove arquivo temporario do LibreOffice
+6dc9876 Adiciona evidencias da Etapa 9
+d69fe37 problemade  conflito do README
+7ac3af7 Initial commit
+5dda0d1 Versao inicial do projeto GerenciadorDD
