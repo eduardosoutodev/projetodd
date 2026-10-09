@@ -1,3 +1,4 @@
+<<<<<<< HEAD
 # GerenciadorDD Web - Etapa 9
 
 Projeto Web do GerenciadorDD desenvolvido com Spring Boot, Maven, Spring Web, JDBC e MySQL.
@@ -39,3 +40,7 @@ JAVA_HOME=/usr/lib/jvm/java-21-openjdk-amd64 /snap/netbeans/149/netbeans/java/ma
 - POST /api/personagens/{id}/itens
 - DELETE /api/itens/{id}
 - GET /api/dashboard
+=======
+# projetodd
+Sistema web para gerenciar campanhas de D&amp;D 5e, com cadastro de personagens, bestiário de criaturas, gerenciamento de itens e painel de informações. Desenvolvido com Java, Spring Boot, MySQL, HTML, CSS e JavaScript.
+>>>>>>> origin/main
